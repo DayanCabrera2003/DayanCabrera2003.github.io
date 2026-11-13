@@ -2,59 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- Título, descripción, canónica y Open Graph se ajustan por idioma en SeoService al prerenderizar. -->
   <title>Dayan Cabrera Corvo — AI & Full-Stack Engineer</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AI and full-stack engineer in Havana, Cuba. I build AI systems that companies trust with sensitive data: internal audit for banks in Chile, recruitment under GDPR in Spain. Open to remote roles.">
+  <meta name="description" content="Dayan Cabrera Corvo, AI and full-stack engineer in Havana, Cuba.">
   <meta name="author" content="Dayan Cabrera Corvo">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
 
-  <meta property="og:title" content="Dayan Cabrera Corvo — AI & Full-Stack Engineer">
-  <meta property="og:description" content="I build AI systems that companies trust with sensitive data. Open to remote roles with teams in Europe and Latin America.">
-  <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://dayancabrera2003.github.io/">
-  <meta property="og:image" content="https://dayancabrera2003.github.io/assets/Dayan.webp">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="es_ES">
-  <meta name="twitter:card" content="summary">
+  <!-- Las dos versiones del sitio se declaran mutuamente para que Google muestre la del idioma de quien busca. -->
+  <link rel="alternate" hreflang="en" href="https://dayancabrera2003.github.io/">
+  <link rel="alternate" hreflang="es" href="https://dayancabrera2003.github.io/es/">
+  <link rel="alternate" hreflang="x-default" href="https://dayancabrera2003.github.io/">
 
-  <link rel="canonical" href="https://dayancabrera2003.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="profile:first_name" content="Dayan">
+  <meta property="profile:last_name" content="Cabrera Corvo">
+  <meta property="og:site_name" content="Dayan Cabrera Corvo">
+  <meta property="og:image" content="https://dayancabrera2003.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dayan Cabrera Corvo — AI & full-stack engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://dayancabrera2003.github.io/assets/og-image.png">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="manifest" href="manifest.json">
 
-  <!-- Dos familias: Source Serif 4 para titulares, Inter para el texto. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
 
+  <!-- Datos estructurados: le dicen a Google quién es la persona y qué perfiles son suyos (sameAs). -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
+    "url": "https://dayancabrera2003.github.io/",
     "dateModified": "2026-11-13",
+    "inLanguage": ["en", "es"],
     "mainEntity": {
       "@type": "Person",
+      "@id": "https://dayancabrera2003.github.io/#person",
       "name": "Dayan Cabrera Corvo",
+      "givenName": "Dayan",
+      "familyName": "Cabrera Corvo",
       "jobTitle": "AI & Full-Stack Engineer",
+      "description": "AI and full-stack engineer who builds AI systems that companies trust with sensitive data.",
       "url": "https://dayancabrera2003.github.io/",
-      "image": "https://dayancabrera2003.github.io/assets/Dayan.webp",
-      "email": "dayancorvo@gmail.com",
+      "image": "https://dayancabrera2003.github.io/assets/dayan-240.webp",
+      "email": "mailto:dayancorvo@gmail.com",
       "address": { "@type": "PostalAddress", "addressLocality": "La Habana", "addressCountry": "CU" },
-      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad de La Habana" },
-      "knowsAbout": ["LLM agents", "RAG", "MCP", "Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "Google Cloud"],
-      "sameAs": ["https://github.com/DayanCabrera2003", "https://www.linkedin.com/in/dayan-cabrera-corvo"]
+      "nationality": { "@type": "Country", "name": "Cuba" },
+      "worksFor": { "@type": "Organization", "name": "ASAI" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad de La Habana", "url": "https://www.uh.cu" },
+      "knowsLanguage": ["es", "en"],
+      "knowsAbout": ["Artificial intelligence", "Large language models", "Retrieval-augmented generation", "Model Context Protocol", "Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "Google Cloud"],
+      "sameAs": [
+        "https://github.com/DayanCabrera2003",
+        "https://www.linkedin.com/in/dayan-cabrera-corvo"
+      ]
     }
   }
   </script>
 </head>
 <body>
   <app-root></app-root>
-  <noscript>
-    <h1>Dayan Cabrera Corvo — AI & Full-Stack Engineer</h1>
-    <p>I build AI systems that companies trust with sensitive data: an AI platform for internal audit used by banks and enterprises in Chile, and a recruitment platform in Spain that handles candidate data under GDPR.</p>
-    <p><a href="assets/Dayan_Cabrera_Corvo_CV.pdf">CV (English)</a> · <a href="assets/Dayan_Cabrera_Corvo_CV_ES.pdf">CV (español)</a> · <a href="mailto:dayancorvo@gmail.com">dayancorvo@gmail.com</a> · <a href="https://github.com/DayanCabrera2003">GitHub</a></p>
-  </noscript>
 </body>
 </html>
