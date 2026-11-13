@@ -1,0 +1,32 @@
+@let w = i18n.content().work;
+<section class="section" id="work">
+  <h2 class="section__label">{{ w.title }}</h2>
+  <div class="section__body">
+    @for (item of w.cases; track item.id) {
+      <article class="case">
+        <p class="case__meta">{{ item.meta }}</p>
+        <h3 class="case__title">{{ item.title }}</h3>
+        <!-- El dato destacado es lo que debería quedarse en la memoria del lector. -->
+        <p class="case__fact">
+          <span class="case__fact-value">{{ item.fact }}</span>
+          <span class="case__fact-label">{{ item.factLabel }}</span>
+        </p>
+        @for (p of item.paragraphs; track $index) {
+          <p class="case__p">{{ p }}</p>
+        }
+        <p class="case__stack">{{ item.stack }}</p>
+      </article>
+    }
+
+    <h3 class="also__title">{{ w.alsoTitle }}</h3>
+    <ul class="also">
+      @for (m of w.also; track m.title) {
+        <li class="also__item">
+          <span class="also__name">{{ m.title }}</span>
+          <span class="also__year">{{ m.year }}</span>
+          <span class="also__text">{{ m.text }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
