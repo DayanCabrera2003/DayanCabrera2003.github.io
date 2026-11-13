@@ -28,6 +28,17 @@
 
 .intro__text { max-width: $measure + 6rem; }
 
+// El nombre va en el h1 porque es lo que la gente busca; visualmente queda discreto
+// para que el protagonismo lo tenga el titular.
+.intro__name {
+  font-family: $font-sans;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
 .intro__kicker {
   font-size: 0.9375rem;
   color: var(--muted);
@@ -35,6 +46,9 @@
 }
 
 .intro__headline {
+  font-family: $font-serif;
+  font-weight: 500;
+  color: var(--ink);
   font-size: clamp(2rem, 1.3rem + 2.6vw, 3.1rem);
   line-height: 1.12;
   letter-spacing: -0.02em;
