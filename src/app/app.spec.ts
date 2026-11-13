@@ -1,34 +1,38 @@
 import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app';
-import { I18nService } from './core/i18n/i18n.service';
+import { provideRouter } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
+import { Title } from '@angular/platform-browser';
+import { routes } from './app.routes';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    // Se fija el idioma antes de cada prueba para no depender del navegador que las ejecuta.
+describe('Portafolio', () => {
+  beforeEach(() => {
+    // Se fija la preferencia en inglés para que la portada no redirija según el navegador de pruebas.
     localStorage.setItem('portfolio.lang', 'en');
-    await TestBed.configureTestingModule({ imports: [AppComponent] }).compileComponents();
+    TestBed.configureTestingModule({ providers: [provideRouter(routes)] });
   });
 
-  it('pinta el titular en inglés', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const h1 = (fixture.nativeElement as HTMLElement).querySelector('h1');
-    expect(h1?.textContent).toContain('I build AI systems');
+  it('pinta la portada en inglés con el nombre en el h1', async () => {
+    const harness = await RouterTestingHarness.create('/');
+    const el = harness.routeNativeElement as HTMLElement;
+    expect(el.querySelector('h1')?.textContent).toContain('Dayan Cabrera Corvo');
+    expect(el.querySelector('.intro__headline')?.textContent).toContain('I build AI systems');
+    expect(TestBed.inject(Title).getTitle()).toContain('AI & Full-Stack Engineer');
   });
 
-  it('cambia todo el contenido al alternar el idioma', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    TestBed.inject(I18nService).toggle();
-    fixture.detectChanges();
-    const el = fixture.nativeElement as HTMLElement;
-    expect(el.querySelector('h1')?.textContent).toContain('Construyo sistemas de IA');
+  it('sirve la versión en español en /es con su propio título y canónica', async () => {
+    const harness = await RouterTestingHarness.create('/es');
+    const el = harness.routeNativeElement as HTMLElement;
+    expect(el.querySelector('.intro__headline')?.textContent).toContain('Construyo sistemas de IA');
     expect(el.querySelector('#work .section__label')?.textContent).toContain('Trabajo seleccionado');
+    expect(TestBed.inject(Title).getTitle()).toContain('Ingeniero de IA');
+    expect(document.querySelector('link[rel="canonical"]')?.getAttribute('href')).toBe(
+      'https://dayancabrera2003.github.io/es/',
+    );
   });
 
-  it('muestra los tres casos y la experiencia', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const el = fixture.nativeElement as HTMLElement;
+  it('muestra los tres casos y la experiencia', async () => {
+    const harness = await RouterTestingHarness.create('/');
+    const el = harness.routeNativeElement as HTMLElement;
     expect(el.querySelectorAll('.case').length).toBe(3);
     expect(el.querySelectorAll('#experience .row').length).toBe(5);
   });
