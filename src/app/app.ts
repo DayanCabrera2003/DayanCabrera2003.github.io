@@ -1,23 +1,10 @@
 import { Component } from '@angular/core';
-import { SiteHeaderComponent } from './core/components/site-header/site-header';
-import { IntroComponent } from './sections/intro/intro';
-import { WorkComponent } from './sections/work/work';
-import { PrinciplesComponent } from './sections/principles/principles';
-import { ExperienceComponent } from './sections/experience/experience';
-import { ContactComponent } from './sections/contact/contact';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    SiteHeaderComponent,
-    IntroComponent,
-    WorkComponent,
-    PrinciplesComponent,
-    ExperienceComponent,
-    ContactComponent,
-  ],
-  templateUrl: './app.html',
-  styleUrls: ['./app.scss'],
+  imports: [RouterOutlet],
+  template: '<router-outlet />',
 })
 export class AppComponent {}
