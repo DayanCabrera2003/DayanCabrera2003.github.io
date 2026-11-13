@@ -1,0 +1,18 @@
+@let e = i18n.content().experience;
+<section class="section" id="experience">
+  <h2 class="section__label">{{ e.title }}</h2>
+  <div class="section__body">
+    <dl class="rows">
+      @for (r of e.rows; track r.place) {
+        <div class="row">
+          <dt class="row__period">{{ r.period }}</dt>
+          <dd class="row__what">
+            <span class="row__place">{{ r.place }}</span>
+            <span class="row__role">{{ r.role }}</span>
+          </dd>
+        </div>
+      }
+    </dl>
+    <p class="languages"><span>{{ e.languagesTitle }}.</span> {{ e.languages }}</p>
+  </div>
+</section>

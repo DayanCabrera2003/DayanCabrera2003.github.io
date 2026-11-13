@@ -1,0 +1,31 @@
+@use '../../core/constants/tokens' as *;
+
+.rows { margin: 0; max-width: $measure; }
+
+.row {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--rule);
+
+  &:last-child { border-bottom: 1px solid var(--rule); }
+
+  @media (max-width: 520px) { grid-template-columns: 1fr; gap: 0.15rem; }
+}
+
+.row__period {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.row__what { margin: 0; display: flex; flex-direction: column; }
+.row__place { color: var(--ink); font-weight: 500; }
+.row__role { font-size: 0.9375rem; }
+
+.languages {
+  margin-top: 1.75rem;
+  font-size: 0.9375rem;
+  span { color: var(--ink); font-weight: 500; }
+}
