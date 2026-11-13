@@ -52,8 +52,7 @@ export const CONTENT_ES: SiteContent = {
           'Lideré el desarrollo desde mayo de 2026. El pipeline de IA lee los CV, encuentra candidatos por ' +
             'significado y no por palabras clave, y elimina los datos personales, alternando entre Gemini y ' +
             'Claude cuando uno de los dos falla.',
-          'Antes del traspaso revisé cada política de acceso y cerré los huecos que encontré, incluidos algunos ' +
-            'que exponían archivos de candidatos. El traspaso fue contractual: doce documentos, del diccionario ' +
+          'El traspaso fue contractual: doce documentos, del diccionario ' +
             'de datos a la evaluación de impacto en protección de datos, y una migración automatizada de todos ' +
             'los datos.',
         ],

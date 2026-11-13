@@ -51,8 +51,7 @@ export const CONTENT_EN: SiteContent = {
             'under GDPR.',
           'I led development from May 2026. The AI pipeline reads CVs, matches candidates by meaning rather than ' +
             'keywords and removes personal data, switching between Gemini and Claude when one of them fails.',
-          'Before handing it over I reviewed every access policy and closed the gaps I found, including some that ' +
-            'exposed candidate files. The handover was contractual: twelve documents, from the data dictionary to ' +
+          'The handover was contractual: twelve documents, from the data dictionary to ' +
             'the data-protection impact assessment, plus a scripted migration of all the data.',
         ],
         stack: 'Supabase · PostgreSQL with row-level security · Vercel · TypeScript · Python · Vercel AI SDK · Gemini · Claude',
