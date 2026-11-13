@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dayan Cabrera Corvo</title>
+  <meta name="robots" content="noindex">
+  <!--
+    El sitio vivía antes en /portfolio/. Los CV ya enviados y los buscadores aún
+    apuntan ahí, así que cualquier ruta bajo /portfolio/ se redirige a la misma
+    ruta en la raíz (incluidos los PDF del CV). El resto vuelve a la portada.
+  -->
+  <script>
+    (function () {
+      var path = location.pathname;
+      var target = path.indexOf('/portfolio') === 0 ? path.slice('/portfolio'.length) || '/' : '/';
+      location.replace(target + location.search + location.hash);
+    })();
+  </script>
+</head>
+<body>
+  <p><a href="/">dayancabrera2003.github.io</a></p>
+</body>
+</html>
