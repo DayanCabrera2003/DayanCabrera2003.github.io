@@ -1,0 +1,14 @@
+@let c = i18n.content().contact;
+<footer class="section contact" id="contact">
+  <h2 class="section__label">{{ c.title }}</h2>
+  <div class="section__body">
+    <p class="contact__text">{{ c.text }}</p>
+    <a class="contact__email" href="mailto:dayancorvo@gmail.com">dayancorvo&#64;gmail.com</a>
+    <ul class="contact__links">
+      @for (l of c.links; track l.href) {
+        <li><a [href]="l.href" target="_blank" rel="noopener">{{ l.label }}</a></li>
+      }
+    </ul>
+    <p class="contact__location">{{ c.location }}</p>
+  </div>
+</footer>
