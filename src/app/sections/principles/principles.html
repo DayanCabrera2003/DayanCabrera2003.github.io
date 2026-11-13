@@ -1,0 +1,9 @@
+@let p = i18n.content().principles;
+<section class="section" id="principles">
+  <h2 class="section__label">{{ p.title }}</h2>
+  <ol class="section__body principles">
+    @for (item of p.items; track $index) {
+      <li>{{ item }}</li>
+    }
+  </ol>
+</section>

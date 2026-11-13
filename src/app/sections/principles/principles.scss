@@ -1,0 +1,17 @@
+@use '../../core/constants/tokens' as *;
+
+.principles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+
+  li {
+    max-width: $measure;
+    font-family: $font-serif;
+    font-size: 1.3rem;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+}
