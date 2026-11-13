@@ -1,25 +1,23 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from './core/components/navbar/navbar';
-import { SideNavbarComponent } from './core/components/side-navbar/side-navbar';
-import { FooterComponent } from './core/components/footer/footer';
-import { HeroComponent } from './sections/hero/hero';
-import { AboutComponent } from './sections/about/about';
-import { ResumeComponent } from './sections/resume/resume';
-import { ServicesComponent } from './sections/services/services';
+import { SiteHeaderComponent } from './core/components/site-header/site-header';
+import { IntroComponent } from './sections/intro/intro';
+import { WorkComponent } from './sections/work/work';
+import { PrinciplesComponent } from './sections/principles/principles';
+import { ExperienceComponent } from './sections/experience/experience';
+import { ContactComponent } from './sections/contact/contact';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    NavbarComponent,
-    SideNavbarComponent,
-    FooterComponent,
-    HeroComponent,
-    AboutComponent,
-    ResumeComponent,
-    ServicesComponent
+    SiteHeaderComponent,
+    IntroComponent,
+    WorkComponent,
+    PrinciplesComponent,
+    ExperienceComponent,
+    ContactComponent,
   ],
   templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  styleUrls: ['./app.scss'],
 })
 export class AppComponent {}
