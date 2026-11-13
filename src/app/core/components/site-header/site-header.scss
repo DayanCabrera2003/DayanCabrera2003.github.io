@@ -1,0 +1,44 @@
+@use '../../constants/tokens' as *;
+
+.header {
+  max-width: $page;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.9375rem;
+
+  @media (min-width: $bp-wide) { padding: 2rem; }
+}
+
+.header__name {
+  font-family: $font-serif;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+
+  a { text-decoration: none; color: var(--muted); }
+  a:hover { color: var(--ink); }
+}
+
+// El cambio de idioma se presenta como un enlace más, no como un control destacado.
+.header__lang {
+  font: inherit;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0 0.4rem;
+  cursor: pointer;
+
+  &:hover { color: var(--ink); border-color: var(--muted); }
+}

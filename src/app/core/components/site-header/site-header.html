@@ -1,0 +1,12 @@
+@let c = i18n.content();
+<header class="header">
+  <a class="header__name" href="#top">Dayan Cabrera Corvo</a>
+  <nav class="header__nav" aria-label="Main">
+    <a href="#work">{{ c.nav.work }}</a>
+    <a href="#experience">{{ c.nav.experience }}</a>
+    <a href="#contact">{{ c.nav.contact }}</a>
+    <button type="button" class="header__lang" (click)="i18n.toggle()" [attr.aria-label]="c.nav.switchLang">
+      {{ i18n.lang() === 'en' ? 'ES' : 'EN' }}
+    </button>
+  </nav>
+</header>
