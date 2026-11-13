@@ -1,7 +1,14 @@
 import { SiteContent } from './content.types';
 
 export const CONTENT_EN: SiteContent = {
-  nav: { work: 'Work', experience: 'Experience', contact: 'Contact', switchLang: 'Ver en español' },
+  seo: {
+    title: 'Dayan Cabrera Corvo — AI & Full-Stack Engineer',
+    description:
+      'Dayan Cabrera Corvo, AI and full-stack engineer in Havana, Cuba. I build AI systems that companies trust ' +
+      'with sensitive data: internal audit for banks in Chile, recruitment under GDPR in Spain. Open to remote roles.',
+    ogLocale: 'en_US',
+  },
+  nav: { work: 'Work', experience: 'Experience', contact: 'Contact', switchLang: 'Ver en español', skip: 'Skip to content' },
 
   intro: {
     kicker: 'AI & full-stack engineer · Havana, Cuba · Remote',

@@ -34,7 +34,9 @@ export interface ExperienceRow {
 }
 
 export interface SiteContent {
-  nav: { work: string; experience: string; contact: string; switchLang: string };
+  /** Título y descripción de la página para buscadores y redes sociales. */
+  seo: { title: string; description: string; ogLocale: string };
+  nav: { work: string; experience: string; contact: string; switchLang: string; skip: string };
   intro: {
     kicker: string;
     headline: string;

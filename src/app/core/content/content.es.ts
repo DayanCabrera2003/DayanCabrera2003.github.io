@@ -1,7 +1,14 @@
 import { SiteContent } from './content.types';
 
 export const CONTENT_ES: SiteContent = {
-  nav: { work: 'Trabajo', experience: 'Experiencia', contact: 'Contacto', switchLang: 'View in English' },
+  seo: {
+    title: 'Dayan Cabrera Corvo — Ingeniero de IA y Full-Stack',
+    description:
+      'Dayan Cabrera Corvo, ingeniero de IA y full-stack en La Habana, Cuba. Construyo sistemas de IA a los que las ' +
+      'empresas confían datos sensibles: auditoría interna para bancos en Chile, reclutamiento bajo el RGPD en España.',
+    ogLocale: 'es_ES',
+  },
+  nav: { work: 'Trabajo', experience: 'Experiencia', contact: 'Contacto', switchLang: 'View in English', skip: 'Saltar al contenido' },
 
   intro: {
     kicker: 'Ingeniero de IA y full-stack · La Habana, Cuba · Remoto',
