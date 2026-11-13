@@ -31,14 +31,11 @@
 }
 
 // El cambio de idioma se presenta como un enlace más, no como un control destacado.
-.header__lang {
-  font: inherit;
+.header__nav .header__lang {
   color: var(--muted);
-  background: none;
   border: 1px solid var(--rule);
   border-radius: 3px;
   padding: 0 0.4rem;
-  cursor: pointer;
 
   &:hover { color: var(--ink); border-color: var(--muted); }
 }

@@ -1,12 +1,17 @@
 @let c = i18n.content();
 <header class="header">
-  <a class="header__name" href="#top">Dayan Cabrera Corvo</a>
-  <nav class="header__nav" aria-label="Main">
-    <a href="#work">{{ c.nav.work }}</a>
-    <a href="#experience">{{ c.nav.experience }}</a>
-    <a href="#contact">{{ c.nav.contact }}</a>
-    <button type="button" class="header__lang" (click)="i18n.toggle()" [attr.aria-label]="c.nav.switchLang">
-      {{ i18n.lang() === 'en' ? 'ES' : 'EN' }}
-    </button>
+  <a class="header__name" [routerLink]="langPath[i18n.lang()]">Dayan Cabrera Corvo</a>
+  <nav class="header__nav" [attr.aria-label]="c.nav.work">
+    <a routerLink="." fragment="work">{{ c.nav.work }}</a>
+    <a routerLink="." fragment="experience">{{ c.nav.experience }}</a>
+    <a routerLink="." fragment="contact">{{ c.nav.contact }}</a>
+    <!-- Enlace real a la otra versión: los buscadores lo siguen y descubren ambas páginas. -->
+    <a
+      class="header__lang"
+      [routerLink]="langPath[i18n.otherLang()]"
+      [attr.hreflang]="i18n.otherLang()"
+      [attr.lang]="i18n.otherLang()"
+      [attr.aria-label]="c.nav.switchLang"
+      (click)="i18n.remember(i18n.otherLang())">{{ i18n.otherLang() | uppercase }}</a>
   </nav>
 </header>
