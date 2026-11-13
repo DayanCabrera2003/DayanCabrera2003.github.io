@@ -3,4 +3,4 @@ Allow: /
 Disallow: /assets/Dayan_Cabrera_Corvo_CV.pdf
 Disallow: /assets/Dayan_Cabrera_Corvo_CV_ES.pdf
 
-Sitemap: https://dayancabrera2003.github.io/portfolio/sitemap.xml
+Sitemap: https://dayancabrera2003.github.io/sitemap.xml
