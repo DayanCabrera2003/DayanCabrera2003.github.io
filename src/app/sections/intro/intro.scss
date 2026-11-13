@@ -1,0 +1,64 @@
+@use '../../core/constants/tokens' as *;
+
+.intro {
+  max-width: $page;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4.5rem;
+
+  @media (min-width: $bp-wide) {
+    display: grid;
+    grid-template-columns: $gutter-col 1fr;
+    gap: 2rem;
+    padding: 5rem 2rem 6rem;
+  }
+}
+
+// Foto pequeña y sin adornos: basta para poner cara al nombre.
+.intro__photo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+
+  @media (min-width: $bp-wide) { width: 120px; height: 120px; }
+}
+
+.intro__text { max-width: $measure + 6rem; }
+
+.intro__kicker {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.intro__headline {
+  font-size: clamp(2rem, 1.3rem + 2.6vw, 3.1rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.75rem;
+}
+
+.intro__lede {
+  max-width: $measure;
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+
+.intro__availability {
+  max-width: $measure;
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.intro__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.9375rem;
+
+  a:first-child { color: var(--accent); text-decoration-color: currentColor; }
+}
